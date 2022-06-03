@@ -3,11 +3,15 @@
 #include <time.h>
 
 /**
-* Main - Main function checks whether a value is negative
+* main - Main function checks whether a value is negative
 * positive or zero
-*
 * arg(n)
+*
+* Description - Functions that checks number for either a negative
+* positive or a zero and prints out the desired output
+* through the if-else conditions
 */
+
 int main(void)
 {
 	int n;
