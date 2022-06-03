@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE="ggc main.c -o main.o"
+ggc -C $CFILE -o $CFILE.o
