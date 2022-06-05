@@ -1,14 +1,11 @@
 i#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
-* main - Main function checks whether a value is negative
-* Description - checks positivity and ngativity of fuction and
-* Return - Always 0
-*/
-
-/* betty style doc for function main goes there */
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;

@@ -1,18 +1,16 @@
 #include <stdio.h>
 /**
- * main - Entry point of the function
- * Description - prints letter a-z excluding
- * q and i
- * return - Always return 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-
-int main()
+int main(void)
 {
-    char i;
+	char i;
 
-  for(i='a'; i <'z';i++)
-        if (i != 'q' && i != 'e')
-            putchar(i);
-
-    return (0);
+	for (i = 'a'; i < 'z'; i++)
+		if (i != 'q' && i != 'e')
+			putchar(i);
+	putchar('\n');
+	return (0);
 }
