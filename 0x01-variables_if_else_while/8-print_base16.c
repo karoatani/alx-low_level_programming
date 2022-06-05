@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the function
- * Description - print all hex value
- * return - Always return 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
-int main()
+int main(void)
 {
-    int i;
-    for (i =0; i < 16; i++)
-        printf("%x",i);
-    return (0);
+	int i;
+
+	for (i = 0; i < 16; i++)
+		printf("%x", i);
+	printf('\n')
+	return (0);
 }
