@@ -1,17 +1,14 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 /**
 * main - Main function checks whether a value is negative
-* positive or zero
-* arg(n)
-*
-* Description - Functions that checks number for either a negative
-* positive or a zero and prints out the desired output
-* through the if-else conditions
+* Description - checks positivity and ngativity of fuction and
+* Return - Always 0
 */
 
+/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
@@ -19,6 +16,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
+	/* your code goes there */
 	if (n > 0)
 		printf("%d is positive\n", n);
 	else if (n == 0)
