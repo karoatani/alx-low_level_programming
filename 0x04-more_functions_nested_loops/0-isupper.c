@@ -11,15 +11,12 @@
 
 int _isupper(int c)
 {
-	int i;
-
-	for (i = 97; i <= 122; i++)
+	if (c >= 65 && c <= 90)
 	{
-		if (c == i)
-			return (0);
-			break;
-		else
-			return (1);
-			break;
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }
