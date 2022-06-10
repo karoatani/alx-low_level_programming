@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 
 /**
  * print_line - prints line
@@ -11,9 +11,10 @@ void print_line(int n)
 {
 	int i = 1;
 
-	while (i <= 5)
+	while (i <= n)
 	{
-		putchar(95);
+		_putchar(95);
 		i++;
 	}
+	_putchar('\n');
 }
