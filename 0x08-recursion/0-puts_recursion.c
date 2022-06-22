@@ -8,14 +8,9 @@
  */
 void _puts_recursion(char *s)
 {
-	static int count;
-
-	count = 0;
-
-	if (*(s + count) != '\0')
+	if (*s != '\0')
 	{
-		_putchar(*(s + count));
-		count++;
+		_putchar(*s);
 		_puts_recursion(s);
 	}
 	else
