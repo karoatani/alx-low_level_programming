@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		count++;
 	}
 	/* allocate memmory for pstr */
-	pstr = malloc(sizeof(char) * (count + 1));
+	pstr = (char *)malloc(sizeof(char) * (count + 1))
 	/* check if str has no value and memory allocation failed */
 	if (str == NULL | pstr == NULL)
 	{
