@@ -8,26 +8,22 @@
  */
 char *_strdup(char *str)
 {
-	int i;
-	int count = 0;
-	char *pstr;
+	char *strout;
+	unsigned int i, j;
 
-	/* get how many element str has */
-	while (*(str + count) != '\0')
-	{
-		count++;
-	}
-	/* allocate memmory for pstr */
-	pstr = malloc(sizeof(char) * (count + 1));
-	/* check if str has no value and memory allocation failed */
-	if (str == NULL | pstr == NULL)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
-	/* copy variables from str to pstr */
-	for (i = 0; i < count; i++)
-	{
-		pstr[i] = str[i];
-	}
-	return (pstr);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
+		return (NULL);
+
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }

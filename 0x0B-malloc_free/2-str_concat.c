@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * str_concat - concatenates two strings.
  * @s1: first string.
@@ -9,40 +10,34 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr = NULL;
-	int count1 = 0;
-	int count2 = 0;
-	int i;
-	int j;
+	char *strout;
+	unsigned int i, j, k, limit;
 
-	if (s1 == NULL | s2 == NULL)
-	{
-		s1 = " ";
-	}
-	while (*(s1 + count1) != '\0')
-	{
-		count1++;
-	}
-	while (*(s2 + count2) != '\0')
-	{
-		count2++;
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	ptr = malloc(sizeof(char) * (count1 + count2 + 1));
+	for (i = 0; s1[i] != '\0'; i++)
+		;
 
-	if (ptr == NULL)
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+
+	strout = malloc(sizeof(char) * (i + j + 1));
+
+	if (strout == NULL)
 	{
-		free(ptr);
+		free(strout);
 		return (NULL);
 	}
-	for (i = 0; i < count1; i++)
-	{
-		ptr[i] = s1[i];
-	}
-	for (j = 0; j <= count2; j++)
-	{
-		ptr[count1] = s2[j];
-		count1++;
-	}
-	return (ptr);
+
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
+
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+
+	return (strout);
 }
