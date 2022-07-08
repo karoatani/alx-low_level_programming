@@ -20,6 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (i == store)
 		{
+
 			printf("%d", va_arg(sep, int));
 			break;
 		}
