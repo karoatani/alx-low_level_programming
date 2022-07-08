@@ -10,6 +10,7 @@ void print_all(const char * const format, ...)
 {
 	va_list fmt;
 	int count = 0;
+	char *s;
 
 	va_start(fmt, format);
 	while (format[count] != '\0')
@@ -26,7 +27,11 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(fmt, double));
 				break;
 			case 's':
-				printf("%s", va_arg(fmt, char*));
+				s = va_arg(fmt, char*);
+				if (s == NULL)
+				{
+					printf("(nil)");
+				}
 				break;
 			default:
 				break;
