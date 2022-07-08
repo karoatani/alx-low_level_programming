@@ -9,23 +9,18 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+	va_list valist;
 	unsigned int i;
-	va_list sep;
-	int store = n - 1;
 
-	va_start(sep, n);
-	if (separator == NULL)
-		printf("NULL Seperator");
+	va_start(valist, n);
+
 	for (i = 0; i < n; i++)
 	{
-		if (i == store)
-		{
-
-			printf("%d", va_arg(sep, int));
-			break;
-		}
-		printf("%d %s", va_arg(sep, int), separator);
+		printf("%d", va_arg(valist, int));
+		if (separator && i < n - 1)
+			printf("%s", separator);
 	}
+
 	printf("\n");
-	va_end(sep);
+	va_end(valist);
 }
